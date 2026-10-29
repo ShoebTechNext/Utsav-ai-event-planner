@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FFF8EE;
+  --foreground: #2B0A3D;
+  --card: #FFFFFF;
+  --card-foreground: #2B0A3D;
+  --popover: #FFFFFF;
+  --popover-foreground: #2B0A3D;
+  --primary: #2B0A3D;
+  --primary-foreground: #FFF8EE;
+  --secondary: #FFF28A;
+  --secondary-foreground: #2B0A3D;
+  --muted: #F3E7F8;
+  --muted-foreground: #6B2089;
+  --accent: #E8457C;
+  --accent-foreground: #FFFFFF;
+  --border: #E6CDF0;
+  --input: #E6CDF0;
+  --ring: #FFB000;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+.dark {
+  --background: #1A0626;
+  --foreground: #FFF8EE;
+  --card: #2B0A3D;
+  --card-foreground: #FFF8EE;
+  --popover: #2B0A3D;
+  --popover-foreground: #FFF8EE;
+  --primary: #FFB000;
+  --primary-foreground: #1A0626;
+  --secondary: #360C47;
+  --secondary-foreground: #FFF8EE;
+  --muted: #360C47;
+  --muted-foreground: #D3A9E4;
+  --accent: #E8457C;
+  --accent-foreground: #FFFFFF;
+  --border: rgba(255, 176, 0, 0.15);
+  --input: rgba(255, 176, 0, 0.15);
+  --ring: #FFB000;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom Accessibility Focus Rings */
+:focus-visible {
+  outline: 2px solid #FFB000;
+  outline-offset: 2px;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 176, 0, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 176, 0, 0.5);
+}
+
+/* Print Stylesheet */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  header,
+  aside,
+  nav,
+  button,
+  .print-hide {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+
